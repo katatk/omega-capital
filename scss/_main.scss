@@ -1,0 +1,114 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h2,
+h3,
+h4 {
+    color: $primary-color;
+}
+
+h2,
+h4 {
+    font-family: "Lora";
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+a {
+    color: $primary-color;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.main {
+    background-color: $primary-color;
+    color: $secondary-color;
+    & h2 {
+        color: $secondary-color;
+    }
+}
+
+.finance-cards {
+    cursor: pointer;
+
+    h4 {
+        border-bottom: 1px solid $secondary-color;
+        padding-bottom: 0.5em;
+        display: flex;
+        justify-content: space-between;
+    }
+    .hover-hidden {
+        background-color: $secondary-color;
+        width: calc(100% - 30px);
+        height: calc(100%);
+        position: absolute;
+        top: 0;
+        padding: 30px 20px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    &:hover .hover-hidden {
+        opacity: 1;
+    }
+}
+
+.case-studies-text {}
+
+/* add background image at lg sizes and above */
+
+.case-studies-container,
+.why-omega-container {
+    background-color: #f4f4f4;
+}
+
+// large devices
+@media (min-width: 992px) {
+    .inner {
+        max-width: 540px;
+        padding: 0 15px;
+    }
+    .case-studies {
+        background: #f4f4f4 url('../assets/case-studies.jpg') no-repeat;
+        background-size: cover;
+    }
+
+    .why-omega {
+        background: #f4f4f4 url('../assets/why.jpg') no-repeat;
+        background-size: cover;
+    }
+    .bg-lg-white {
+        background-color: #f4f4f4;
+        background-image: none;
+    }
+}
+
+.case-studies-nav {
+    display: inline-block;
+
+    li {
+        .page-link {
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            margin-right: 0.25em;
+        }
+        &.active .page-link {
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+        }
+    }
+}

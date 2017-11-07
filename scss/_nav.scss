@@ -1,0 +1,105 @@
+/* mobile nav styles */
+
+.navbar-toggler {
+
+    .navbar-toggler-icon {
+        height: auto;
+        .fa-bars {
+            color: $primary-color;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    }
+    margin-top: 1rem;
+
+    @media (min-width: 992px) {
+        margin-top: 0;
+
+    }
+}
+
+
+.call {
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+    position: absolute;
+    border-bottom: 0;
+
+
+    .fa-stack {
+        color: $secondary-color;
+        margin: 0 0.3rem;
+
+        .fa-phone {
+            color: $secondary-color;
+        }
+    }
+
+    a .ph-number {
+        font-size: 1.3rem;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @media (min-width: 992px) {
+        border-bottom: 1px solid $secondary-color;
+        position: static;
+    }
+}
+
+/* desktop styles */
+
+.navbar {
+    padding: 0;
+    li {
+        &.active,
+        &:hover {
+            border-bottom: 3px solid $secondary-color;
+        }
+
+        .nav-link {
+            color: $primary-color;
+            padding-top: 1.625rem;
+            padding-bottom: 1.625rem;
+        }
+        a {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.navbar-brand {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 992px) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.logo {
+    background-color: #fff;
+    max-height: 80px;
+    width: auto;
+
+    @media (min-width: 992px) {
+        position: absolute;
+        top: -59px;
+        left: 50px;
+        max-height: 50px;
+    }
+
+    @media (min-width: 1200px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        top: -50px;
+        left: auto;
+        max-height: 110px;
+    }
+}
+
+.dropdown-menu {
+    background-color: $secondary-color;
+}
