@@ -2,22 +2,39 @@
     text-transform: uppercase;
 
     .carousel-caption {
-        top: 20%;
+        top: 10%;
         text-align: left;
+        @media (min-width: 550px) {
+            top: 20%;
+        }
+
         h1 {
-            font-size: 2.375rem;
+            font-size: 2rem;
             max-width: 26ch;
-            text-shadow: 2px 2px rgba(0,0,0,0.4);
-            margin-bottom: 1em;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+            margin-bottom: 0.5em;
+
+            @media (min-width: 768px) {
+                font-size: 2.375rem;
+            }
+
+            @media (min-width: 1200px) {
+                margin-bottom: 1em;
+            }
+
         }
         .btn {
             background-color: $secondary-color;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: $primary-color;
             font-family: "Lora", serif;
             padding: 15px 20px;
             border: 0;
             cursor: pointer;
+
+            @media (min-width: 768px) {
+                font-size: 1rem;
+            }
 
             &:hover {
                 background-color: $primary-color;
@@ -30,6 +47,15 @@
 
 .carousel-item {
     max-height: 473px;
+}
+
+// hide indicators on mobile, show on tablet
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+    @media (min-width: 768px) {
+        display: flex;
+    }
 
 
 }

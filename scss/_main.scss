@@ -33,6 +33,14 @@ ul {
 
 .btn {
     border-radius: 0;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+button:focus {
+    outline: 0;
 }
 
 .main {
@@ -67,13 +75,58 @@ ul {
     }
 }
 
-.case-studies-text {}
-
 /* add background image at lg sizes and above */
 
-.case-studies-container,
 .why-omega-container {
-    background-color: #f4f4f4;
+    background: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.1;
+        background-image: url('../assets/why.jpg');
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+}
+
+.case-studies-container {
+    background: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.1;
+        background-image: url('../assets/case-studies.jpg');
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .case-studies-container,
+    .why-omega-container {
+        background-color: #f4f4f4;
+        background-image: none;
+    }
 }
 
 // large devices
@@ -83,12 +136,12 @@ ul {
         padding: 0 15px;
     }
     .case-studies {
-        background: #f4f4f4 url('../assets/case-studies.jpg') no-repeat;
+        background: url('../assets/case-studies.jpg') no-repeat;
         background-size: cover;
     }
 
     .why-omega {
-        background: #f4f4f4 url('../assets/why.jpg') no-repeat;
+        background: url('../assets/why.jpg') no-repeat;
         background-size: cover;
     }
     .bg-lg-white {

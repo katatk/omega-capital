@@ -1,24 +1,5 @@
 /* mobile nav styles */
 
-.navbar-toggler {
-
-    .navbar-toggler-icon {
-        height: auto;
-        .fa-bars {
-            color: $primary-color;
-            cursor: pointer;
-            font-size: 2rem;
-        }
-    }
-    margin-top: 1rem;
-
-    @media (min-width: 992px) {
-        margin-top: 0;
-
-    }
-}
-
-
 .call {
     font-family: "Lora", serif;
     font-size: 1.1rem;
@@ -52,19 +33,39 @@
 
 .navbar {
     padding: 0;
-    li {
-        &.active,
-        &:hover {
-            border-bottom: 3px solid $secondary-color;
+    @media (min-width: 992px) {
+        li {
+            &.active,
+            &:hover {
+                border-bottom: 3px solid $secondary-color;
+            }
         }
-
         .nav-link {
             color: $primary-color;
             padding-top: 1.625rem;
             padding-bottom: 1.625rem;
         }
-        a {
-            text-transform: uppercase;
+    }
+
+    a {
+        text-transform: uppercase;
+        text-align: center;
+        @media (min-width: 992px) {
+            text-align: left;
+        }
+    }
+    
+    .collapsing {
+        transition-duration: 0.8s;
+    }
+}
+
+.nav-item a {
+    &:hover,
+    &:focus {
+        background-color: #f8f9fa;
+        @media (min-width: 992px) {
+            background-color: transparent;
         }
     }
 }
@@ -101,5 +102,21 @@
 }
 
 .dropdown-menu {
-    background-color: $secondary-color;
+    border: none;
+    transition: 0.5 ease;
 }
+
+@media (min-width: 992px) {
+    .dropdown-menu {
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+
+    }
+}
+
+/* change caret to plus on mobile */
+
+.dropdown-toggle::after {
+    
+}
+
