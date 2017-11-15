@@ -23,13 +23,6 @@ $(document).ready(function () {
         $(this).toggleClass('open');
     });
 
-     // slidedown effect for main menu
-    /*$('.navbar-toggler').click(function () {
-        $('.navbar-collapse').slideToggle(500, function () {
-
-        });
-    });*/
-
     // slidedown effect for dropdown menu
     $('.dropdown-toggle').click(function () {
         $('.dropdown-menu').slideToggle();
